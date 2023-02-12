@@ -1,0 +1,192 @@
+@import "./variables.scss";
+
+.review_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  font-family: $font-base;
+  margin-top: 1rem;
+  // padding-bottom: 1rem;
+  max-width: 800px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 500;
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.comments {
+  font-family: $font-base;
+  // margin-top: 1rem;
+  width: 100%;
+  max-width: 800px;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.single_comment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid $color-very-light;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      p {
+        font-weight: 500;
+      }
+
+      img {
+        height: 2.5rem;
+        width: 2.5rem;
+        object-fit: cover;
+        border: 1px solid $color-dark;
+        border-radius: 0.5rem;
+      }
+    }
+
+    button {
+      color: black;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $color-very-light;
+  img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid $color-dark;
+    border-radius: 0.5rem;
+  }
+
+  textarea {
+    width: 100%;
+    height: 2.5rem;
+    overflow: hidden;
+    resize: none;
+
+    padding: 0.5rem 1rem;
+
+    background-color: $color-very-light;
+    border: 1px solid $color-light;
+    border-radius: 0.5rem;
+
+    font-family: $font-base;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: background-color, height 0.2s ease;
+
+    &:focus {
+      background-color: white;
+      height: 7.5rem;
+      overflow: auto;
+      outline: 2px solid $color-orange;
+      border: none;
+    }
+
+    &::placeholder {
+      color: $color-dark;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: none;
+    color: $color-dark;
+    border: 2px solid $color-light;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    &:disabled {
+      border-color: $color-very-light;
+    }
+
+    &:hover {
+      border-color: $color-orange;
+      background-color: $color-orange;
+    }
+
+    .icon {
+      color: $color-light;
+      transition: all 0.2s ease;
+    }
+
+    &:disabled .icon {
+      color: $color-very-light;
+    }
+
+    &:hover .icon {
+      color: white;
+    }
+  }
+}
+
+.sending {
+  height: 2.5rem;
+}
+
+@media (min-width: 1250px) {
+  .content {
+    margin: 1rem 10rem 0 10rem;
+    width: 100%;
+  }
+  .comments {
+    margin: 1rem 10rem 0 10rem;
+    width: 100%;
+  }
+
+  .review_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
