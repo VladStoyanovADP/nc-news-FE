@@ -1,16 +1,13 @@
 import { useState } from "react";
 import styles from "../styles/votes.module.scss";
 import { patchArticleVote } from "../utils/utils";
-import ErrorMessage from "./ErrorMessage";
 
 function Vote({ isArticle, id, votes }) {
   const [articleVotes, setArticleVotes] = useState(votes);
-  const [error, setError] = useState(null);
   const voteHandler = (inc) => {
     setArticleVotes((prev) => prev + inc);
     if (isArticle) {
       patchArticleVote(id, inc).catch(({ response }) => {
-        setError(response.status);
         setArticleVotes((prev) => prev - inc);
       });
     }
@@ -28,11 +25,6 @@ function Vote({ isArticle, id, votes }) {
           thumb_down
         </span>
       </button>
-      <ErrorMessage
-        code={error}
-        action={"vote on articles"}
-        setError={setError}
-      />
     </div>
   );
 }
