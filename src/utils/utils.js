@@ -26,7 +26,7 @@ async function getUser(username) {
   return data.user;
 }
 
-function patchArticleVote(id, inc_votes, token) {
+function patchArticleVote(id, inc_votes) {
   return api.patch(`/articles/${id}`, { inc_votes });
 }
 

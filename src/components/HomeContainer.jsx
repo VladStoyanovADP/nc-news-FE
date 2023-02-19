@@ -1,8 +1,9 @@
 import TopicsContainer from "./TopicsContainer";
 
-function HomeContainer() {
+function HomeContainer()
+{
   return (
-    <main className="">
+    <main className="">     
       <TopicsContainer />
     </main>
   );
