@@ -8,8 +8,11 @@ function TopicsContainer()
   const [isPending, setIsPending] = useState(true)
   const [topic, setTopics] = useState([]);
   useEffect(() => {
-    getTopics().then((res) => setTopics(res));
-    setIsPending(false)
+    getTopics().then((res) =>
+    {
+      setTopics(res)
+      setIsPending(false);
+    });
   }, []);
   return (
     <section className={styles.cat_container}>
