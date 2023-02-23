@@ -1,4 +1,4 @@
-NC News is a standalone front-end project that showcases my ability to create a CRUD application from a front-end standpoint. You can access the live version of the project at this link: https://63e9334c4662742bf5876c0f--effortless-moonbeam-f74416.netlify.app/
+NC News is a standalone front-end project that showcases my ability to create a CRUD application from a front-end standpoint. You can access the live version of the project at this link: https://63f21adf39e955618b3f5943--effortless-moonbeam-f74416.netlify.app/
 
 It showcases all the front-end skills, tools, and best practices that I have learned.
 
